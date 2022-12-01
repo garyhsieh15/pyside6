@@ -1,1 +1,1 @@
-# pyside6_note
+# pyside6
