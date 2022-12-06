@@ -3,15 +3,15 @@ import sys
 from PySide6.QtWidgets import QApplication, QMainWindow
 from PySide6.QtCore import QFile
 #    folder.file     class
-from UI.label import UiMainWindow
+from UI.label import Ui_MainWindow
 #     folder    file
 #from UI import label
 
 class MainWindow(QMainWindow):
     def __init__(self):
         super(MainWindow, self).__init__()
-        self.ui = UiMainWindow()
-        #self.ui = label.UiMainWindow()
+        self.ui = Ui_MainWindow()
+        #self.ui = label.Ui_MainWindow()
         self.ui.setupUi(self)
 
 if __name__ == "__main__":
