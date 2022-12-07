@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="pic">
+    <file>images/Arrows and States (9).png</file>
     <file>images/Devices (4).png</file>
   </qresource>
 </RCC>

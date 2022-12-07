@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>696</width>
+    <width>749</width>
     <height>538</height>
    </rect>
   </property>
@@ -25,7 +25,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>696</width>
+     <width>749</width>
      <height>29</height>
     </rect>
    </property>
@@ -83,6 +83,7 @@
     <bool>false</bool>
    </attribute>
    <addaction name="actionSave"/>
+   <addaction name="actionRun"/>
    <addaction name="actionAAA"/>
   </widget>
   <widget class="QToolBar" name="toolBar_2">
@@ -174,11 +175,25 @@
     <string>AAA</string>
    </property>
   </action>
+  <action name="actionRun">
+   <property name="icon">
+    <iconset resource="apprcc.qrc">
+     <normaloff>:/pic/images/Arrows and States (9).png</normaloff>:/pic/images/Arrows and States (9).png</iconset>
+   </property>
+   <property name="text">
+    <string>Run</string>
+   </property>
+   <property name="toolTip">
+    <string>Run</string>
+   </property>
+   <property name="shortcut">
+    <string>F5</string>
+   </property>
+  </action>
  </widget>
  <resources>
   <include location="apprcc.qrc"/>
   <include location="test.qrc"/>
-  <include location="test_01.qrc"/>
  </resources>
  <connections/>
 </ui>
