@@ -25,7 +25,6 @@ class MainWindow(QMainWindow):
         ret = self.ui_dialog_run.show()
         #print(ret)
 
-
 class DialogRun(QMainWindow):
     def __init__(self):
         super(DialogRun, self).__init__()
