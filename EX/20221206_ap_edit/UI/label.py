@@ -25,7 +25,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(817, 528)
+        MainWindow.resize(1015, 708)
         font = QFont()
         font.setFamilies([u"Agency FB"])
         font.setPointSize(12)
@@ -69,7 +69,7 @@ class Ui_MainWindow(object):
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QMenuBar(MainWindow)
         self.menubar.setObjectName(u"menubar")
-        self.menubar.setGeometry(QRect(0, 0, 817, 29))
+        self.menubar.setGeometry(QRect(0, 0, 1015, 52))
         font1 = QFont()
         font1.setPointSize(12)
         self.menubar.setFont(font1)
@@ -109,7 +109,6 @@ class Ui_MainWindow(object):
         self.toolBar_2.setToolButtonStyle(Qt.ToolButtonIconOnly)
         self.toolBar_2.setFloatable(False)
         MainWindow.addToolBar(Qt.LeftToolBarArea, self.toolBar_2)
-        MainWindow.insertToolBarBreak(self.toolBar_2)
 
         self.menubar.addAction(self.menuFile_F.menuAction())
         self.menubar.addAction(self.menuEdit_E.menuAction())
@@ -123,6 +122,7 @@ class Ui_MainWindow(object):
         self.toolBar_2.addAction(self.actionSetting)
 
         self.retranslateUi(MainWindow)
+        self.actionAAA.triggered.connect(MainWindow.close)
 
         QMetaObject.connectSlotsByName(MainWindow)
     # setupUi

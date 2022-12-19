@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import sys
 
 from PySide6.QtWidgets import QApplication, QMainWindow
@@ -19,8 +20,8 @@ class MainWindow(QMainWindow):
 
         self.ui_dialog_run = DialogRun()
         self.ui.actionRun.triggered.connect(self.popup)
-
-    @QtCore.Slot()
+    # comment out @QtCore.Slot() and the code can be run OK.
+    #@QtCore.Slot()
     def popup(self):
         ret = self.ui_dialog_run.show()
         #print(ret)
