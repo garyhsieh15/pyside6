@@ -2,6 +2,8 @@
   <qresource prefix="pic">
     <file>images/icons8-settings_01-96.png</file>
     <file>images/Arrows and States (9).png</file>
+    <file>images/file_512.png</file>
+    <file>images/folder_128.png</file>
     <file>images/Devices (4).png</file>
   </qresource>
 </RCC>

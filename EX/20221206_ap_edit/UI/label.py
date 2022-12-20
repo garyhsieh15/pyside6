@@ -16,8 +16,9 @@ from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
     QIcon, QImage, QKeySequence, QLinearGradient,
     QPainter, QPalette, QPixmap, QRadialGradient,
     QTransform)
-from PySide6.QtWidgets import (QApplication, QMainWindow, QMenu, QMenuBar,
-    QSizePolicy, QStatusBar, QToolBar, QWidget)
+from PySide6.QtWidgets import (QApplication, QHeaderView, QMainWindow, QMenu,
+    QMenuBar, QSizePolicy, QStatusBar, QToolBar,
+    QTreeWidget, QTreeWidgetItem, QWidget)
 import apprcc_rc
 import test_rc
 
@@ -64,8 +65,16 @@ class Ui_MainWindow(object):
         self.actionSetting.setIcon(icon3)
         self.actionSetting.setAutoRepeat(True)
         self.actionSetting.setVisible(True)
+        self.actionFileManager = QAction(MainWindow)
+        self.actionFileManager.setObjectName(u"actionFileManager")
+        icon4 = QIcon()
+        icon4.addFile(u":/pic/images/folder_128.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.actionFileManager.setIcon(icon4)
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
+        self.treeWidget = QTreeWidget(self.centralwidget)
+        self.treeWidget.setObjectName(u"treeWidget")
+        self.treeWidget.setGeometry(QRect(0, 0, 271, 668))
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QMenuBar(MainWindow)
         self.menubar.setObjectName(u"menubar")
@@ -119,6 +128,7 @@ class Ui_MainWindow(object):
         self.toolBar.addAction(self.actionSave)
         self.toolBar.addAction(self.actionRun)
         self.toolBar.addAction(self.actionAAA)
+        self.toolBar_2.addAction(self.actionFileManager)
         self.toolBar_2.addAction(self.actionSetting)
 
         self.retranslateUi(MainWindow)
@@ -172,6 +182,9 @@ class Ui_MainWindow(object):
 #if QT_CONFIG(tooltip)
         self.actionSetting.setToolTip(QCoreApplication.translate("MainWindow", u"Setting", None))
 #endif // QT_CONFIG(tooltip)
+        self.actionFileManager.setText(QCoreApplication.translate("MainWindow", u"FileManager", None))
+        ___qtreewidgetitem = self.treeWidget.headerItem()
+        ___qtreewidgetitem.setText(0, QCoreApplication.translate("MainWindow", u"File Manager", None));
         self.menuFile_F.setTitle(QCoreApplication.translate("MainWindow", u"File", None))
         self.menuEdit_E.setTitle(QCoreApplication.translate("MainWindow", u"Edit", None))
         self.menuView.setTitle(QCoreApplication.translate("MainWindow", u"View", None))
