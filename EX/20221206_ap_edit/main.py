@@ -2,10 +2,13 @@
 import sys
 
 from PySide6.QtWidgets import QApplication, QMainWindow
+from PySide6.QtWidgets import QFileSystemModel
+
+from PySide6.QtGui import QStandardItemModel, QStandardItem
 
 from PySide6 import QtCore
-from PySide6.QtCore import Qt, QObject, Signal
-from PySide6.QtCore import QFile
+from PySide6.QtCore import Signal
+from PySide6.QtCore import QFile, QDir
 
 #    folder.file     class
 from UI.label import Ui_MainWindow
@@ -28,12 +31,27 @@ class MainWindow(QMainWindow):
         # 連結信號與槽函示
         self.btn_ok_signal.connect(self.btn_ok_slot)
 
-        # >>> 設定tree的內容
-        # setting num of column.
-        self.ui.treeWidget.setColumnCount(1)
-        # setting title of column.
-        self.ui.treeWidget.setHeaderLabels(["File Manager"])
-
+        # >>> 設定treeView的內容
+        #model_00 = QFileSystemModel()
+        #model_00.setRootPath(QDir.currentPath())
+        #self.ui.treeView.setModel(model_00)
+        
+        model = QStandardItemModel(self.ui.treeView)
+        model.setHorizontalHeaderLabels(["class", "NP"])
+        #model.invisibleRootItem()
+        for row in range(4):
+            item = QStandardItem("row- "+str(row))
+            for column in range(2):
+                item2 = QStandardItem("column: "+str(column))
+                # 讓欄位點兩下後，不可編輯
+                item2.setEditable(False)
+                item.appendRow(item2)
+            model.appendRow(item)
+        
+        self.ui.treeView.setModel(model)
+        # 全部展開
+        self.ui.treeView.expandAll()
+        self.ui.treeView.doubleClicked.connect(self.get_value)
         # <<<
 
     # comment out @QtCore.Slot() and the code can be run OK.
@@ -52,6 +70,12 @@ class MainWindow(QMainWindow):
     # 定義槽函式
     def btn_ok_slot(self):
         print(">>> btn ok slot func")
+
+    
+    def get_value(self, val):
+        print(">>> show val.data: ", val.data())
+        print(">>> show val.row: ", val.row())
+        print(">>> show val.column: ", val.column())
 
 class DialogRun(QMainWindow):
     def __init__(self):

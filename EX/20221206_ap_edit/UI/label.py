@@ -18,7 +18,7 @@ from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
     QTransform)
 from PySide6.QtWidgets import (QApplication, QHeaderView, QMainWindow, QMenu,
     QMenuBar, QSizePolicy, QStatusBar, QToolBar,
-    QTreeWidget, QTreeWidgetItem, QWidget)
+    QTreeView, QWidget)
 import apprcc_rc
 import test_rc
 
@@ -26,7 +26,8 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(1015, 708)
+        MainWindow.resize(1095, 889)
+        MainWindow.setMaximumSize(QSize(16777215, 16777215))
         font = QFont()
         font.setFamilies([u"Agency FB"])
         font.setPointSize(12)
@@ -68,17 +69,23 @@ class Ui_MainWindow(object):
         self.actionFileManager = QAction(MainWindow)
         self.actionFileManager.setObjectName(u"actionFileManager")
         icon4 = QIcon()
-        icon4.addFile(u":/pic/images/folder_128.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon4.addFile(u":/pic/images/folder_512.png", QSize(), QIcon.Normal, QIcon.Off)
         self.actionFileManager.setIcon(icon4)
+        self.actionCallList = QAction(MainWindow)
+        self.actionCallList.setObjectName(u"actionCallList")
+        self.actionCallList.setCheckable(True)
+        icon5 = QIcon()
+        icon5.addFile(u":/pic/images/list_981x878.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.actionCallList.setIcon(icon5)
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
-        self.treeWidget = QTreeWidget(self.centralwidget)
-        self.treeWidget.setObjectName(u"treeWidget")
-        self.treeWidget.setGeometry(QRect(0, 0, 271, 668))
+        self.treeView = QTreeView(self.centralwidget)
+        self.treeView.setObjectName(u"treeView")
+        self.treeView.setGeometry(QRect(0, 1, 281, 731))
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QMenuBar(MainWindow)
         self.menubar.setObjectName(u"menubar")
-        self.menubar.setGeometry(QRect(0, 0, 1015, 52))
+        self.menubar.setGeometry(QRect(0, 0, 1095, 52))
         font1 = QFont()
         font1.setPointSize(12)
         self.menubar.setFont(font1)
@@ -125,10 +132,11 @@ class Ui_MainWindow(object):
         self.menuFile_F.addAction(self.actionNew)
         self.menuFile_F.addAction(self.actionOpen)
         self.menuFile_F.addAction(self.actionClose)
+        self.toolBar.addAction(self.actionFileManager)
         self.toolBar.addAction(self.actionSave)
         self.toolBar.addAction(self.actionRun)
         self.toolBar.addAction(self.actionAAA)
-        self.toolBar_2.addAction(self.actionFileManager)
+        self.toolBar_2.addAction(self.actionCallList)
         self.toolBar_2.addAction(self.actionSetting)
 
         self.retranslateUi(MainWindow)
@@ -183,8 +191,10 @@ class Ui_MainWindow(object):
         self.actionSetting.setToolTip(QCoreApplication.translate("MainWindow", u"Setting", None))
 #endif // QT_CONFIG(tooltip)
         self.actionFileManager.setText(QCoreApplication.translate("MainWindow", u"FileManager", None))
-        ___qtreewidgetitem = self.treeWidget.headerItem()
-        ___qtreewidgetitem.setText(0, QCoreApplication.translate("MainWindow", u"File Manager", None));
+        self.actionCallList.setText(QCoreApplication.translate("MainWindow", u"CallList", None))
+#if QT_CONFIG(tooltip)
+        self.actionCallList.setToolTip(QCoreApplication.translate("MainWindow", u"CallList", None))
+#endif // QT_CONFIG(tooltip)
         self.menuFile_F.setTitle(QCoreApplication.translate("MainWindow", u"File", None))
         self.menuEdit_E.setTitle(QCoreApplication.translate("MainWindow", u"Edit", None))
         self.menuView.setTitle(QCoreApplication.translate("MainWindow", u"View", None))
