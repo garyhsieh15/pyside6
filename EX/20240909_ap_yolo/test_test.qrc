@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="seven">
+    <file>images_test/kid-goku-4k.jpeg</file>
+  </qresource>
+</RCC>
