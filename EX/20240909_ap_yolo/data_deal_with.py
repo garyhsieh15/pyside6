@@ -59,7 +59,7 @@ class DialogRun(QMainWindow):
         self.model = QFileSystemModel()
         self.model.setRootPath(QDir.currentPath())
         self.dialog_run.treeView.setModel(self.model)
-        self.dialog_run.treeView.setRootIndex(self.model.index(""))  # 設置為空白
+        self.dialog_run.treeView.setRootIndex(self.model.index(QDir.currentPath()))
 
         # 連結pushButton的點擊事件
         self.dialog_run.pushButton.clicked.connect(self.open_folder_dialog)
