@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="pic_test">
+    <file>images_test/cartoon1.ico</file>
+    <file>images_test/cartoon2.ico</file>
+  </qresource>
+</RCC>
