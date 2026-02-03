@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>867</width>
-    <height>889</height>
+    <width>1200</width>
+    <height>900</height>
    </rect>
   </property>
   <property name="maximumSize">
@@ -113,7 +113,6 @@
    <addaction name="actionFileManager"/>
    <addaction name="actionSave"/>
    <addaction name="actionRun"/>
-   <addaction name="actionAAA"/>
    <addaction name="actionseven"/>
   </widget>
   <widget class="QToolBar" name="toolBar_2">
@@ -231,18 +230,6 @@
     <string>Ctrl+S</string>
    </property>
   </action>
-  <action name="actionAAA">
-   <property name="icon">
-    <iconset resource="test.qrc">
-     <normaloff>:/pic_test/images_test/cartoon1.ico</normaloff>:/pic_test/images_test/cartoon1.ico</iconset>
-   </property>
-   <property name="text">
-    <string>AAA</string>
-   </property>
-   <property name="toolTip">
-    <string>AAA</string>
-   </property>
-  </action>
   <action name="actionRun">
    <property name="icon">
     <iconset resource="apprcc.qrc">
@@ -317,10 +304,6 @@
    </property>
   </action>
   <action name="actionseven">
-   <property name="icon">
-    <iconset resource="test_test.qrc">
-     <normaloff>:/seven/images_test/kid-goku-4k.jpeg</normaloff>:/seven/images_test/kid-goku-4k.jpeg</iconset>
-   </property>
    <property name="text">
     <string>seven</string>
    </property>
@@ -331,26 +314,8 @@
  </widget>
  <resources>
   <include location="apprcc.qrc"/>
-  <include location="test.qrc"/>
-  <include location="test_test.qrc"/>
  </resources>
  <connections>
-  <connection>
-   <sender>actionAAA</sender>
-   <signal>triggered()</signal>
-   <receiver>MainWindow</receiver>
-   <slot>close()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>-1</x>
-     <y>-1</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>507</x>
-     <y>353</y>
-    </hint>
-   </hints>
-  </connection>
   <connection>
    <sender>actionseven</sender>
    <signal>triggered()</signal>

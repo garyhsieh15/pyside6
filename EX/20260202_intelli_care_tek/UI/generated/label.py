@@ -3,7 +3,7 @@
 ################################################################################
 ## Form generated from reading UI file 'main_win.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.7.2
+## Created by: Qt User Interface Compiler version 6.4.1
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
@@ -20,14 +20,12 @@ from PySide6.QtWidgets import (QApplication, QHeaderView, QMainWindow, QMenu,
     QMenuBar, QSizePolicy, QStatusBar, QToolBar,
     QTreeView, QWidget)
 import apprcc_rc
-import test_rc
-import test_test_rc
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(867, 889)
+        MainWindow.resize(1200, 900)
         MainWindow.setMaximumSize(QSize(16777215, 16777215))
         font = QFont()
         font.setFamilies([u"Agency FB"])
@@ -46,47 +44,39 @@ class Ui_MainWindow(object):
         self.actionSave = QAction(MainWindow)
         self.actionSave.setObjectName(u"actionSave")
         icon = QIcon()
-        icon.addFile(u":/pic/images/Devices (4).png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        icon.addFile(u":/pic/images/Devices (4).png", QSize(), QIcon.Normal, QIcon.Off)
         self.actionSave.setIcon(icon)
-        self.actionAAA = QAction(MainWindow)
-        self.actionAAA.setObjectName(u"actionAAA")
-        icon1 = QIcon()
-        icon1.addFile(u":/pic_test/images_test/cartoon1.ico", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-        self.actionAAA.setIcon(icon1)
         self.actionRun = QAction(MainWindow)
         self.actionRun.setObjectName(u"actionRun")
-        icon2 = QIcon()
-        icon2.addFile(u":/pic/images/Arrows and States (9).png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-        self.actionRun.setIcon(icon2)
+        icon1 = QIcon()
+        icon1.addFile(u":/pic/images/Arrows and States (9).png", QSize(), QIcon.Normal, QIcon.Off)
+        self.actionRun.setIcon(icon1)
         self.actionSetting = QAction(MainWindow)
         self.actionSetting.setObjectName(u"actionSetting")
         self.actionSetting.setCheckable(False)
         self.actionSetting.setEnabled(True)
-        icon3 = QIcon()
-        icon3.addFile(u":/pic/images/icons8-settings_01-96.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-        self.actionSetting.setIcon(icon3)
+        icon2 = QIcon()
+        icon2.addFile(u":/pic/images/icons8-settings_01-96.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.actionSetting.setIcon(icon2)
         self.actionSetting.setAutoRepeat(True)
         self.actionSetting.setVisible(True)
         self.actionFileManager = QAction(MainWindow)
         self.actionFileManager.setObjectName(u"actionFileManager")
-        icon4 = QIcon()
-        icon4.addFile(u":/pic/images/folder_512.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-        self.actionFileManager.setIcon(icon4)
+        icon3 = QIcon()
+        icon3.addFile(u":/pic/images/folder_512.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.actionFileManager.setIcon(icon3)
         self.actionCallList = QAction(MainWindow)
         self.actionCallList.setObjectName(u"actionCallList")
         self.actionCallList.setCheckable(True)
-        icon5 = QIcon()
-        icon5.addFile(u":/pic/images/list_981x878.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-        self.actionCallList.setIcon(icon5)
+        icon4 = QIcon()
+        icon4.addFile(u":/pic/images/list_981x878.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.actionCallList.setIcon(icon4)
         self.actionAP = QAction(MainWindow)
         self.actionAP.setObjectName(u"actionAP")
         self.actionAbout = QAction(MainWindow)
         self.actionAbout.setObjectName(u"actionAbout")
         self.actionseven = QAction(MainWindow)
         self.actionseven.setObjectName(u"actionseven")
-        icon6 = QIcon()
-        icon6.addFile(u":/seven/images_test/kid-goku-4k.jpeg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-        self.actionseven.setIcon(icon6)
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.treeView = QTreeView(self.centralwidget)
@@ -118,11 +108,11 @@ class Ui_MainWindow(object):
         MainWindow.setStatusBar(self.statusbar)
         self.toolBar = QToolBar(MainWindow)
         self.toolBar.setObjectName(u"toolBar")
-        MainWindow.addToolBar(Qt.ToolBarArea.LeftToolBarArea, self.toolBar)
+        MainWindow.addToolBar(Qt.LeftToolBarArea, self.toolBar)
         self.toolBar_2 = QToolBar(MainWindow)
         self.toolBar_2.setObjectName(u"toolBar_2")
         self.toolBar_2.setEnabled(True)
-        sizePolicy = QSizePolicy(QSizePolicy.Policy.Fixed, QSizePolicy.Policy.Preferred)
+        sizePolicy = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.toolBar_2.sizePolicy().hasHeightForWidth())
@@ -136,7 +126,7 @@ class Ui_MainWindow(object):
         self.toolBar_2.setOrientation(Qt.Vertical)
         self.toolBar_2.setToolButtonStyle(Qt.ToolButtonIconOnly)
         self.toolBar_2.setFloatable(False)
-        MainWindow.addToolBar(Qt.ToolBarArea.LeftToolBarArea, self.toolBar_2)
+        MainWindow.addToolBar(Qt.LeftToolBarArea, self.toolBar_2)
 
         self.menubar.addAction(self.menuFile_F.menuAction())
         self.menubar.addAction(self.menuEdit_E.menuAction())
@@ -150,13 +140,11 @@ class Ui_MainWindow(object):
         self.toolBar.addAction(self.actionFileManager)
         self.toolBar.addAction(self.actionSave)
         self.toolBar.addAction(self.actionRun)
-        self.toolBar.addAction(self.actionAAA)
         self.toolBar.addAction(self.actionseven)
         self.toolBar_2.addAction(self.actionCallList)
         self.toolBar_2.addAction(self.actionSetting)
 
         self.retranslateUi(MainWindow)
-        self.actionAAA.triggered.connect(MainWindow.close)
         self.actionseven.triggered.connect(MainWindow.close)
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -192,10 +180,6 @@ class Ui_MainWindow(object):
 #if QT_CONFIG(shortcut)
         self.actionSave.setShortcut(QCoreApplication.translate("MainWindow", u"Ctrl+S", None))
 #endif // QT_CONFIG(shortcut)
-        self.actionAAA.setText(QCoreApplication.translate("MainWindow", u"AAA", None))
-#if QT_CONFIG(tooltip)
-        self.actionAAA.setToolTip(QCoreApplication.translate("MainWindow", u"AAA", None))
-#endif // QT_CONFIG(tooltip)
         self.actionRun.setText(QCoreApplication.translate("MainWindow", u"Run", None))
 #if QT_CONFIG(tooltip)
         self.actionRun.setToolTip(QCoreApplication.translate("MainWindow", u"Run", None))
